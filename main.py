@@ -1,12 +1,13 @@
 import random
 
 def main():
-    print(random_state(7, 3))
+    random_board = random_state(5, 5)
+    render(random_board)
 
 
 def dead_state(w, h):
     board = []
-    for i in range(h):
+    for _ in range(h):
         board.append([0] * w)
         
     return board
@@ -19,7 +20,11 @@ def random_state(w, h):
             random_number = random.random()
             outer[inner] = 0 if random_number >= 0.5 else 1
     return state
-    
+
+def render(board):
+    for row in board:
+        line = str(row).replace("[", "").replace("]", "").replace(",", "").replace(" ", "").replace("1","🟦").replace("0", "🟥")
+        print(line)
 
 if __name__ == "__main__":
     main()
