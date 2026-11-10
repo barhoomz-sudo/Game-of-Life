@@ -2,7 +2,7 @@ import random
 import time
 
 def main():
-    random_board = random_state(20, 20)
+    random_board = random_state(100, 100)
     render(random_board)
     print()
     while True:
