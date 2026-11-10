@@ -1,21 +1,14 @@
 import random
+import time
 
 def main():
-    random_board = random_state(4, 4)
-    start = [
-    [0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0],
-    [0, 1, 1, 1, 0],
-    [0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0],
-]
-    round1 = next_board_state(start)
-    round2 = next_board_state(round1)
-    render(start)
+    random_board = random_state(20, 20)
+    render(random_board)
     print()
-    render(round1)
-    print()
-    render(round2)
+    while True:
+        random_board = next_board_state(random_board)
+        render(random_board)
+        time.sleep(0.5)
 
 def dead_state(w, h):
     board = []
