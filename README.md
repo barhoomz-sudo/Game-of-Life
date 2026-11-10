@@ -7,6 +7,8 @@ Game of Life (or just “Life”) is not really a game. There’s no winning or 
 Life’s simple, elegant rules give rise to astonishingly complex emergent behavior. It is played on a 2-D grid. Each square in the grid contains a cell, and each cell starts the game as either “alive” or “dead”. Play proceeds in rounds. During each round, each cell looks at its 8 immediate neighbors and counts up the number of them that are currently alive.
 
 **This is what it will look like**
+
+
 ![Game of Life demo](assets/demo.gif)
 
 you can run simply by typing the following:
